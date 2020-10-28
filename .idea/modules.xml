@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/aop_log/aop_log.iml" filepath="$PROJECT_DIR$/aop_log/aop_log.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_dubbo_consumer/springboot_dubbo_consumer.iml" filepath="$PROJECT_DIR$/springboot_dubbo_consumer/springboot_dubbo_consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_dubbo_interface/springboot_dubbo_interface.iml" filepath="$PROJECT_DIR$/springboot_dubbo_interface/springboot_dubbo_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_dubbo_provider/springboot_dubbo_provider.iml" filepath="$PROJECT_DIR$/springboot_dubbo_provider/springboot_dubbo_provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/test1.iml" filepath="$PROJECT_DIR$/test1.iml" />
     </modules>
   </component>
