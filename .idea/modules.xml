@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/springboot_dubbo_interface/springboot_dubbo_interface.iml" filepath="$PROJECT_DIR$/springboot_dubbo_interface/springboot_dubbo_interface.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_dubbo_provider/springboot_dubbo_provider.iml" filepath="$PROJECT_DIR$/springboot_dubbo_provider/springboot_dubbo_provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/test1.iml" filepath="$PROJECT_DIR$/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tkmybatis/tkmybatis.iml" filepath="$PROJECT_DIR$/tkmybatis/tkmybatis.iml" />
     </modules>
   </component>
 </project>

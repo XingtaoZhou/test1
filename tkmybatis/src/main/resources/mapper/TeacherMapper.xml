@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.TeacherMapper">
+  <resultMap id="BaseResultMap" type="com.example.entity.Teacher">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="tno" jdbcType="VARCHAR" property="tno" />
+    <result column="tname" jdbcType="VARCHAR" property="tname" />
+    <result column="tsex" jdbcType="VARCHAR" property="tsex" />
+    <result column="tbirthday" jdbcType="TIMESTAMP" property="tbirthday" />
+    <result column="prof" jdbcType="VARCHAR" property="prof" />
+    <result column="depart" jdbcType="VARCHAR" property="depart" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    tno, tname, tsex, tbirthday, prof, depart
+  </sql>
+</mapper>

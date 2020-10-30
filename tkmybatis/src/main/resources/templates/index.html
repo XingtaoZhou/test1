@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+    <h1>index</h1>
+    <br>
+    <div>
+        <h3>1.查询Student表中的所有记录的Sname、Ssex和Class列。</h3>
+        <form action="/select1" method="post">
+            <input type="submit" value="查找">
+        </form>
+    </div>
+    <div>
+        <h3> 2、查询教师所有的单位即不重复的Depart列。</h3>
+        <form action="/select2" method="post">
+            <input type="submit" value="查找">
+        </form>
+    </div>
+    <div>
+        <h3>3、 查询Student表的所有记录。</h3>
+        <form action="/select3" method="post">
+            <input type="submit" value="查找">
+        </form>
+    </div>
+    <div>
+        <h3>4、 查询Score表中成绩在a到b之间的所有记录。</h3>
+        <form action="/select4" method="post">
+            a:<input type="text" name="a">
+            b:<input type="text" name="b">
+            <input type="submit" value="查找">
+        </form>
+    </div>
+    <div>
+        <h3>5、 查询Score表中成绩为85，86或88的记录。</h3>
+        <form action="/select5" method="post">
+            <input type="submit" value="查找">
+        </form>
+    </div>
+    <div>
+        <h3>6、 查询Student表中“95031”班或性别为“女”的同学记录。</h3>
+        <form action="/select6" method="post">
+            班级:<input type="text" name="sclass">
+            性别:<input type="text" name="ssex">
+            <input type="submit" value="查找">
+        </form>
+    </div>
+    <div>
+        <h3>9、 查询“95031”班的学生人数。</h3>
+        <form action="/select7" method="post">
+            班级:<input type="text" name="sclass">
+            <input type="submit" value="查找">
+        </form>
+    </div>
+    <div>
+        <h3>10、 查询Score表中的最高分的学生学号和课程号。（子查询或者排序）</h3>
+        <form action="/select8" method="post">
+            <input type="submit" value="查找">
+        </form>
+    </div>
+    <div>
+        <h3>11、 查询每门课的平均成绩。</h3>
+        <form action="/select9" method="post">
+            <input type="submit" value="查找">
+        </form>
+    </div>
+    <div>
+        <h3>12、查询Score表中至少有5名学生选修的并以3开头的课程的平均分数。</h3>
+        <form action="/select10" method="post">
+            选修人数:<input type="text" name="a">
+            课程开头:<input type="text" name="b">
+            <input type="submit" value="查找">
+        </form>
+    </div>
+    <div>
+        <h3>14、查询所有学生的Sname、Cno和Degree列。(多表查询)</h3>
+        <form action="/select11" method="post">
+            <input type="submit" value="查找">
+        </form>
+    </div>
+
+    <div>
+        <h3>17、查询“95033”班学生的平均分。</h3>
+        <form action="/select12" method="post">
+            班级:<input type="text" name="sclass">
+            <input type="submit" value="查找">
+        </form>
+    </div>
+
+    <div>
+        <h3>18、查询选修“3-105”课程的成绩高于“109”号同学成绩的所有同学的记录。</h3>
+        <form action="/select13" method="post">
+            <input type="submit" value="查找">
+        </form>
+    </div>
+
+    <div>
+        <h3>19、查询score中选学多门课程的同学中分数为非最高分成绩的记录。</h3>
+        <form action="/select14" method="post">
+            <input type="submit" value="查找">
+        </form>
+    </div>
+
+    <div>
+        <h3>20、查询成绩高于60、课程号为“3-105”的成绩的所有记录。</h3>
+        <form action="/select15" method="post">
+            成绩:<input type="text" name="degree">
+            课程号:<input type="text" name="cno">
+            <input type="submit" value="查找">
+        </form>
+    </div>
+
+    <div>
+        <h3>22、查询“张旭“教师任课的学生成绩（姓名）。</h3>
+        <form action="/select16" method="post">
+            <input type="submit" value="查找">
+        </form>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
