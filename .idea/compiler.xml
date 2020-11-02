@@ -9,11 +9,21 @@
         <outputRelativeToContentRoot value="true" />
         <module name="springboot_dubbo_interface" />
         <module name="springboot_dubbo_provider" />
+        <module name="02_springcloud_consumer" />
+        <module name="05_eureka_client_consumer" />
         <module name="springboot_dubbo_consumer" />
+        <module name="04_eureka_client_provider" />
+        <module name="01_springcloud_provider" />
         <module name="aop_log" />
+        <module name="03_eureka_service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="01_springcloud_provider" target="1.8" />
+      <module name="02_springcloud_consumer" target="1.8" />
+      <module name="03_eureka_service" target="1.8" />
+      <module name="04_eureka_client_provider" target="1.8" />
+      <module name="05_eureka_client_consumer" target="1.8" />
       <module name="aop_log" target="1.8" />
       <module name="springboot_dubbo_consumer" target="1.8" />
       <module name="springboot_dubbo_interface" target="1.5" />
@@ -22,6 +32,11 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="01_springcloud_provider" options="-parameters" />
+      <module name="02_springcloud_consumer" options="-parameters" />
+      <module name="03_eureka_service" options="-parameters" />
+      <module name="04_eureka_client_provider" options="-parameters" />
+      <module name="05_eureka_client_consumer" options="-parameters" />
       <module name="aop_log" options="-parameters" />
       <module name="springboot_dubbo_consumer" options="-parameters" />
       <module name="springboot_dubbo_provider" options="-parameters" />

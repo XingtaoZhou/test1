@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/01_springcloud_provider/01_springcloud_provider.iml" filepath="$PROJECT_DIR$/01_springcloud_provider/01_springcloud_provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_springcloud_consumer/02_springcloud_consumer.iml" filepath="$PROJECT_DIR$/02_springcloud_consumer/02_springcloud_consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_eureka_service/03_eureka_service.iml" filepath="$PROJECT_DIR$/03_eureka_service/03_eureka_service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_eureka_client_provider/04_eureka_client_provider.iml" filepath="$PROJECT_DIR$/04_eureka_client_provider/04_eureka_client_provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_eureka_client_consumer/05_eureka_client_consumer.iml" filepath="$PROJECT_DIR$/05_eureka_client_consumer/05_eureka_client_consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/aop_log/aop_log.iml" filepath="$PROJECT_DIR$/aop_log/aop_log.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_dubbo_consumer/springboot_dubbo_consumer.iml" filepath="$PROJECT_DIR$/springboot_dubbo_consumer/springboot_dubbo_consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/springboot_dubbo_interface/springboot_dubbo_interface.iml" filepath="$PROJECT_DIR$/springboot_dubbo_interface/springboot_dubbo_interface.iml" />
