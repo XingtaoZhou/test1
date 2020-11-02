@@ -1,21 +1,29 @@
 package com.example.service.impl;
 
-import com.example.domain.Permissions;
-import com.example.domain.Role;
 import com.example.domain.User;
+import com.example.mapper.UserMapper;
 import com.example.service.LoginService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.*;
 
 @Service
 public class LoginServiceImpl implements LoginService {
+
+    @Autowired
+    private UserMapper userMapper;
+
     @Override
     public User getUserByName(String getMapByName) {
         return getMapByName(getMapByName);
     }
 
-    private User getMapByName(String userName) {
+    private User getMapByName(String userName){
+        User user = userMapper.getUserByName(userName);
+        return user;
+    }
+
+
+    /*private User getMapByName(String userName) {
 
         //创建权限
         Permissions permissions1 = new Permissions("1","query");
@@ -44,7 +52,7 @@ public class LoginServiceImpl implements LoginService {
         map.put(user2.getUserName(),user2);
 
         return map.get(userName);
-    }
+    }*/
 }
 
 

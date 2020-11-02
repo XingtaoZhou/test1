@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.StudentMapper">
+  <resultMap id="BaseResultMap" type="com.example.entity.Student">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="sno" jdbcType="VARCHAR" property="sno" />
+    <result column="sname" jdbcType="VARCHAR" property="sname" />
+    <result column="ssex" jdbcType="VARCHAR" property="ssex" />
+    <result column="sbirthday" jdbcType="TIMESTAMP" property="sbirthday" />
+    <result column="sclass" jdbcType="VARCHAR" property="sclass" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    sno, sname, ssex, sbirthday, sclass
+  </sql>
+
+  <select id="select1" resultType="Student">
+    select sname,ssex,sclass from student
+  </select>
+
+  <select id="select6" resultType="Student">
+    select * from student where sclass = #{sclass} or ssex = #{ssex}
+  </select>
+
+  <select id="select11" resultType="map">
+    select a.sname,b.cno,b.degree from student a left join score b on a.sno = b.sno
+  </select>
+
+  <select id="selectAvgDegreeBySclass" resultType="map">
+    select
+    a.sclass,avg(degree) as avgdegree
+    from student a
+    left join score b
+    on a.sno = b.sno
+    where a.sclass = #{sclass}
+    group by a.sclass
+  </select>
+
+  <select id="select13" resultType="map">
+    select *
+    from student a join score b
+    on a.sno = b.sno
+    where b.degree > (select degree from score where sno = '109' and cno = '3-105')
+  </select>
+
+  <select id="select14" resultType="map">
+    select a.sno,a.sname,a.ssex,a.sbirthday,a.sclass,b.cno,b.degree
+    from student a join score b
+    on a.sno = b.sno
+    where b.sno in (select sno from score group by sno having count(*) > 1)
+    and b.degree not in (select max(degree) from score )
+  </select>
+</mapper>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.ScoreMapper">
+  <resultMap id="BaseResultMap" type="com.example.entity.Score">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="sno" jdbcType="VARCHAR" property="sno" />
+    <result column="cno" jdbcType="VARCHAR" property="cno" />
+    <result column="degree" jdbcType="DECIMAL" property="degree" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    id, sno, cno, degree
+  </sql>
+
+  <select id="select4" resultType="Score">
+    select * from score where degree between #{a} and #{b}
+  </select>
+
+  <select id="select5" resultType="Score">
+    select * from score where degree in (85,86,88)
+  </select>
+
+  <select id="selectMaxScore" resultType="Score">
+    select * from score order by degree desc limit 1
+  </select>
+
+  <select id="selectAvgDegree" resultType="map">
+    select cno,avg(degree) as avgdegree from score group by cno
+  </select>
+
+  <select id="selectAvgDegreeSelective" resultType="map">
+    select cno,avg(degree) as avgdegree,count(*) as num  from score where cno like #{b} '%'  group by cno having count(*) >= #{a}
+  </select>
+  
+  <select id="select15" resultType="map">
+    select *
+    from score 
+    <where>
+      <if test="degree!=null and degree!='' ">
+        degree > #{degree}
+      </if>
+      <if test="cno!=null and cno != '' ">
+        and cno = #{cno}
+      </if>
+    </where>
+  </select>
+
+  <select id="select16" resultType="map">
+    select a.sno,a.degree,a.cno,b.cname,b.tno,c.tname
+    from score a
+    left join course b
+    on a.cno = b.cno
+    left join teacher c
+    on b.tno = c.tno
+    where c.tname='张旭'
+  </select>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
