@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/03_eureka_service/pom.xml" />
         <option value="$PROJECT_DIR$/04_eureka_client_provider/pom.xml" />
         <option value="$PROJECT_DIR$/05_eureka_client_consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/tkmybatis/pom.xml" />
       </list>
     </option>
   </component>

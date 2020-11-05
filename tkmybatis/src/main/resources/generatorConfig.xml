@@ -56,7 +56,13 @@
 
         <!--对应数据库表 mysql可以加入主键自增 字段命名 忽略某字段等 -->
         <!--指定逆向生成的数据库表名-->
-        <table tableName="course" domainObjectName="Course"
+        <table tableName="sb_sub_cycle_param" domainObjectName="SbSubCycleParam"
+               enableCountByExample="false"
+               enableUpdateByExample="false"
+               enableDeleteByExample="false"
+               enableSelectByExample="false"
+               selectByExampleQueryId="false" />
+        <!--<table tableName="course" domainObjectName="Course"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"
@@ -79,7 +85,7 @@
                enableUpdateByExample="false"
                enableDeleteByExample="false"
                enableSelectByExample="false"
-               selectByExampleQueryId="false" />
+               selectByExampleQueryId="false" />-->
 
     </context>
 </generatorConfiguration>

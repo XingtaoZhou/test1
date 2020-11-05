@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.SbSubCycleParamMapper">
+  <resultMap id="BaseResultMap" type="com.example.entity.SbSubCycleParam">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="LEGAL_PERSON_CODE" jdbcType="VARCHAR" property="legalPersonCode" />
+    <result column="CYCLE_TYPE" jdbcType="DECIMAL" property="cycleType" />
+    <result column="BEGIN_DATE" jdbcType="TIMESTAMP" property="beginDate" />
+    <result column="CYCLE_DATE_DAY" jdbcType="DECIMAL" property="cycleDateDay" />
+    <result column="WALLET_NO" jdbcType="DECIMAL" property="walletNo" />
+    <result column="SUB_AMOUNT" jdbcType="DECIMAL" property="subAmount" />
+    <result column="CREATE_TIME" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="UPDATE_TIME" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="OP_ID" jdbcType="DECIMAL" property="opId" />
+    <result column="IS_USE" jdbcType="DECIMAL" property="isUse" />
+    <result column="CARD_TYPE" jdbcType="DECIMAL" property="cardType" />
+    <result column="CYCLE_NUM" jdbcType="DECIMAL" property="cycleNum" />
+    <result column="SUB_TYPE" jdbcType="DECIMAL" property="subType" />
+    <result column="END_DATE" jdbcType="TIMESTAMP" property="endDate" />
+    <result column="SUB_FOR" jdbcType="DECIMAL" property="subFor" />
+    <result column="SUB_FOR_TIME" jdbcType="DECIMAL" property="subForTime" />
+    <result column="SUB_NOT_DAY" jdbcType="DECIMAL" property="subNotDay" />
+    <result column="SUB_TIME" jdbcType="TIMESTAMP" property="subTime" />
+    <result column="SUB_UNLINE_HOUR" jdbcType="DECIMAL" property="subUnlineHour" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.example.entity.SbSubCycleParam">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="REMARK" jdbcType="LONGVARCHAR" property="remark" />
+  </resultMap>
+  <sql id="Blob_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    REMARK
+  </sql>
+
+  <select id="queryByExample" resultType="SbSubCycleParam">
+    select * from sb_sub_cycle_param where CARD_TYPE = #{cardType} and SUB_FOR = #{subFor} and WALLET_NO = #{walletNo}
+  </select>
+
+  <update id="updateOne">
+    update sb_sub_cycle_param set
+    CYCLE_DATE_DAY = #{cycleDateDay},
+    SUB_AMOUNT = #{subAmount},
+    CREATE_TIME = #{createTime},
+    UPDATE_TIME = #{updateTime},
+    OP_ID = #{opId},
+    REMARK = #{remark},
+    IS_USE = #{isUse},
+    CYCLE_NUM = #{cycleNum},
+    SUB_TYPE = #{subType},
+    END_DATE = #{endDate},
+    SUB_FOR_TIME = #{subForTime},
+    SUB_NOT_DAY = #{subNotDay},
+    SUB_TIME = #{subTime},
+    SUB_UNLINE_HOUR = #{subUnlineHour}
+    where CARD_TYPE = #{cardType} and SUB_FOR = #{subFor} and WALLET_NO = #{walletNo}
+  </update>
+</mapper>

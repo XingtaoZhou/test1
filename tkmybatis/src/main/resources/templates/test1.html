@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>开始使用layui</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+</head>
+<body>
+<!-- 你的HTML代码 -->
+
+
+<script src="../layui/layui.js">
+    /*layui.use('layer', function(){
+        var layer = layui.layer;
+
+        layer.msg('hello');
+    });*/
+
+    layui.use(['form', 'upload'], function(){  //如果只加载一个模块，可以不填数组。如：layui.use('form')
+        var form = layui.form //获取form模块
+            ,upload = layui.upload; //获取upload模块
+
+        //监听提交按钮
+        form.on('submit(test)', function(data){
+            console.log(data);
+        });
+
+        //实例化一个上传控件
+        upload({
+            url: '上传接口url'
+            ,success: function(data){
+                console.log(data);
+            }
+        })
+    });
+</script>
+
+
+<!--<script src="../layui/layui.js"></script>
+<script>
+    //一般直接写在一个js文件中
+    layui.use(['layer', 'form'], function(){
+        var layer = layui.layer
+            ,form = layui.form;
+
+        layer.msg('Hello World');
+    });
+</script>-->
+
+</body>
+</html>

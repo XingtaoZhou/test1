@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index1</title>
+</head>
+<body>
+<script type="text/javascript">
+    $(function (){
+        $("#btn").click(function (){
+            fun1();
+        })
+    })
+    function fun1(){
+        var jsonStr = [{"legalPersonCycleParam": "200624717680", "cardType": "1", "subFor":"1", "walletNo":"1", "subAmount":"1000"},
+            {"legalPersonCycleParam": "200624717680", "cardType": "2", "subFor":"2", "walletNo":"2", "subAmount":"500"}]
+        $.ajax({
+            url:"save",
+            type:"post",
+            dataType:"json",
+            data:{"sbSubCycleParams":jsonStr},
+            success:function (resp){
+                alert("操作成功")
+            }
+        })
+    }
+</script>
+
+<button name="btn" id="btn">发送</button>
+
+
+<form action="/save" method="post">
+    法人号：<input type="text" name="legalPersonCode" value="200624717680"><br>
+    卡类型：<input type="text" name="cardType" ><br>
+    发放依据：<input type="text" name="subFor" ><br>
+    钱包号：<input type="text" name="walletNo" ><br>
+    补助金额：<input type="text" name="subAmount" ><br>
+    <input type="submit" value="提交" name="btn">
+</form>
+
+
+[{"legalPersonCycleParam": "200624717680", "cardType": "1", "subFor":"1", "walletNo":"1", "subAmount":"1000"},
+{"legalPersonCycleParam": "200624717680", "cardType": "2", "subFor":"2", "walletNo":"2", "subAmount":"500"}]
+"[{'legalPersonCycleParam': '200624717680', 'cardType': '1', 'subFor':'1', 'walletNo':'1', 'subAmount':'1000'},
+{'legalPersonCycleParam': '200624717680', 'cardType': '2', 'subFor':'2', 'walletNo':'2', 'subAmount':'500'}]"
+
+</body>
+</html>
